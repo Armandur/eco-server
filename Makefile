@@ -1,4 +1,3 @@
-
 ECO_VERSION ?= 0.7.3.1-beta
 
 DOCKER_IMAGE = armandur/eco-server
@@ -27,4 +26,3 @@ run:
 	-v ~/eco-server/Configs:/srv/eco-server/Configs \
 	--network=host \
 	${DOCKER_TARGET}
-	
