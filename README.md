@@ -13,3 +13,18 @@ docker run -d --name "eco-server" -v ~/eco-server/Storage:/srv/eco-server/Storag
 ```
 make build
 ```
+
+## Example docker-compose.yml
+
+```
+eco-server:
+  image: armandur/eco-server:latest
+  ports:
+  - 2999:2999/udp
+  - 3000:3000
+  - 3001:3001
+  volumes:
+  - ./Storage:/srv/eco-server/Storage:rw
+  - ./Configs:/srv/eco-server/Configs:rw
+  privileged: true
+```
